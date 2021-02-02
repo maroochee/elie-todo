@@ -1,6 +1,47 @@
-# Getting Started with Create React App
+# Getting Started with Elie Todo
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+## How I built this sample project
+1. Based on this [tutorial](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+2. Added some custom styling
+3. Added Jest for testing and coverage
+
+## What this project implemented
+1. Users are able to Add, Edit, Delete, Complete, and Re-Activate todo tasks
+2. Users are able to filter todo tasks
+3. All todo tasks and current filter status are persistent with localStorage
+4. Unit test and coverage report applied (report will be generated both on the screen and lcov report)
+5. Dockerfile added
+   
+## The limits of this project
+1. Unit test are not component base, all the test cases are in one test file
+2. Unit test covers basic assertions only for the initial app status
+3. Coverage threshold are set to 70%, so current unit test fails as it's below the threshold
+
+## How to use Dockerfile
+1. In the project directory, build Docker image first
+```sh
+docker build -t sample/elie-todo .
+```
+2. Check the Docker image
+```sh
+docker images
+```
+3. Run the Docker image
+```sh
+docker run --name elie-todo -p 4680:3000 -d sample/elie-todo
+```
+4. Access the app in the browser
+```sh
+# first, need to get the ip address of our running Docker engine
+docker-machine ip default
+-> <ip-address-of-docker-engine>
+
+# then visit http://ip-address-of-docker-engine>:4680
+docker run --name elie-todo -p 4680:3000 -d sample/elie-todo
+```
 
 ## Available Scripts
 
