@@ -12,7 +12,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 1. Users are able to Add, Edit, Delete, Complete, and Re-Activate todo tasks
 2. Users are able to filter todo tasks
 3. All todo tasks and current filter status are persistent with localStorage
-4. Unit test and coverage report applied (report will be generated both on the screen and lcov report)
+4. Unit test and coverage report applied (report will be generated both on the screen and lcov report. Added a screenshot of the report [here](https://github.com/maroochee/elie-todo/blob/master/testCoverage.png))
 5. Dockerfile added
    
 ## The limits of this project
